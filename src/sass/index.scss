@@ -1,0 +1,145 @@
+@import "common.scss";
+@import "mixin.scss";
+.wrap{
+    width:100%;
+    height:100%;
+    @include box_flex;
+    @include direction(column);
+}
+header{
+    width:100%;
+    height:pxTorem(150px);
+    background:url(../images/banner.png) no-repeat center center;
+    background-size:cover;
+    .head{
+        width:100%;
+        height:pxTorem(44px);
+        margin-top:pxTorem(10px);
+        padding:0 pxTorem(15px);
+        box-sizing:border-box;
+        div{
+            width:100%;
+            height:100%;
+            background:#fff;
+            border-radius:pxTorem(5px);
+            @include box_flex;
+            @include align;
+            span{
+                font-size:pxTorem(14px);
+                margin:0 pxTorem(10px);
+            }
+            img:nth-child(2){
+                height:pxTorem(8px);
+                width:pxTorem(8px);
+            }
+            img:nth-child(3){
+                height:pxTorem(30px);
+                width:pxTorem(4px);
+                margin:0 pxTorem(10px);
+            }
+            img:nth-child(4){
+                height:pxTorem(20px);
+                width:pxTorem(20px);
+            }
+            input{
+                @include flex;
+            }
+        }
+    }
+}
+section{
+       @include flex;
+       .banner{
+           width:100%;
+           height:pxTorem(150px);
+           .swiper-wrapper{
+               .swiper-slide{
+                @include box_flex;
+                @include flexFlow;
+                @include justify(center);
+                @include align;
+                dl{
+                    @include box_flex;
+                    @include direction(column);
+                    @include justify(center);
+                    @include align;
+                    margin:pxTorem(10px) 0;
+                    width:25%;
+                    height:pxTorem(60px);
+                    dt{
+                        width:pxTorem(40px);
+                        height:pxTorem(40px);
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                }
+            }
+           }
+           
+       }
+       .title{
+           width:100%;
+           height:pxTorem(50px);
+           padding:0 pxTorem(15px);
+           box-sizing:border-box;
+           @include box_flex;
+           margin:pxTorem(20px) 0;
+           img{
+               width:pxTorem(50px);
+               margin-right:pxTorem(15px);
+           }
+           .right{
+               @include flex;
+               @include box_flex;
+               p{
+                   line-height:pxTorem(20px);
+                   font-size:pxTorem(14px);
+               }
+           }
+       }
+       .con{
+           width:100%;
+           @include box_flex;
+           @include flexFlow;
+           padding:0 pxTorem(15px);;
+           box-sizing:border-box;
+           >div{
+               width:45%;
+               height:pxTorem(70px);
+               background:#FAFAFA;
+               @include box_flex;
+               @include justify(space-between);
+               @include align;
+               margin:pxTorem(15px) pxTorem(8px);
+               .left{
+                   h2{
+                    font-size:pxTorem(16px);
+                       line-height:pxTorem(25px);
+                   }
+                   p{
+                       font-size:pxTorem(14px);
+                       color:#ccc;
+                   }
+               }
+               img{
+                   width:pxTorem(40px);
+                   height:100%;
+               }
+           }
+       }
+}
+footer{
+      width:100%;
+      height:pxTorem(50px);
+      @include box_flex;
+      @include justify(space-around);
+      text-align:center;
+      @include align;
+      border-top:pxTorem(1px) solid #ccc;
+      img{
+          width:pxTorem(20px);
+          height:pxTorem(20px);
+      }
+}
